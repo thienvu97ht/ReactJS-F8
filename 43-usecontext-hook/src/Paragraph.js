@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ThemeContext } from "./ThemeContext";
 
-function Paragraph({ theme }) {
-  console.log("theme: ", theme);
+function Paragraph() {
+  const context = useContext(ThemeContext);
+
   return (
-    <p className={theme}>
+    <p className={context.theme}>
       Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur eligendi
       ea iure excepturi pariatur blanditiis repudiandae alias! Explicabo,
       doloremque natus adipisci nesciunt, quas sit consequatur iusto ab
